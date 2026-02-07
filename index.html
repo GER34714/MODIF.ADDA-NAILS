@@ -1,0 +1,557 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Adda Nails — Beauty Studio 💅✨</title>
+  <meta name="description" content="Adda Nails — Beauty Studio. Manicuría profesional: Soft Gel, Semipermanente y Kapping Gel. Atención de 09:00 a 16:00 hs. Turnos por WhatsApp.">
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="CIBORG 347™" />
+  <meta name="keywords" content="manicuría, uñas, soft gel, semipermanente, kapping gel, beauty studio, nails, manicura a domicilio" />
+  <link rel="canonical" href="https://adda-nails.onrender.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adda Nails — Beauty Studio 💅✨" />
+  <meta property="og:description" content="Manicuría profesional con Adda Nails 💅 Soft Gel, Semipermanente y Kapping Gel. Horario 09:00–16:00 hs. Turnos por WhatsApp." />
+  <meta property="og:image" content="https://iili.io/Kg7MF9I.md.jpg" />
+  <meta property="og:url" content="https://adda-nails.onrender.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Adda Nails" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Adda Nails — Beauty Studio 💅✨" />
+  <meta name="twitter:description" content="Soft Gel, Semipermanente y Kapping Gel. Horario 09:00–16:00 hs. Turnos por WhatsApp." />
+  <meta name="twitter:image" content="https://iili.io/Kg7MF9I.md.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://iili.io/Kg7MF9I.md.jpg" />
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Fuente personalizada SOLO para el encabezado -->
+  <style>
+    @font-face {
+      font-family: 'MyteriScript';
+      src: url('MyteriScript_PERSONAL_USE_ONLY.otf') format('opentype');
+      font-display: swap;
+    }
+
+    :root{
+      --bg: #fff7fb;
+      --fg: #443a45;
+      --accent: #ff5fb0;
+      --accent2: #ffd1e8;
+      --gold: #c9a14a;
+      --muted: #7b6f78;
+      --card: #ffffff;
+      --shadow: rgba(170, 0, 102, 0.08);
+      --whatsapp: #25D366;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      overflow-x:hidden;
+    }
+
+    header{
+      text-align:center;
+      padding:80px 20px 40px;
+      position:relative;
+      background: radial-gradient(circle at 30% 20%, #fff0f6, #fff7fb 80%);
+      overflow:hidden;
+    }
+
+    .glitter{
+      position:absolute;
+      inset:0;
+      overflow:hidden;
+      pointer-events:none;
+      z-index:0;
+    }
+    .spark{
+      position:absolute;
+      width:6px;
+      height:6px;
+      background:radial-gradient(circle, rgba(255,182,220,1) 0%, rgba(255,182,220,0) 80%);
+      border-radius:50%;
+      opacity:0.6;
+      animation:twinkle 6s infinite ease-in-out;
+    }
+    @keyframes twinkle{
+      0%,100%{transform:translateY(0) scale(1);opacity:0.4;}
+      50%{transform:translateY(-12px) scale(1.4);opacity:1;}
+    }
+
+    .spark:nth-child(1){top:10%;left:15%;animation-delay:0s;}
+    .spark:nth-child(2){top:40%;left:25%;animation-delay:1.5s;}
+    .spark:nth-child(3){top:70%;left:50%;animation-delay:2.8s;}
+    .spark:nth-child(4){top:30%;left:75%;animation-delay:4.2s;}
+    .spark:nth-child(5){top:60%;left:85%;animation-delay:5.6s;}
+    .spark:nth-child(6){top:20%;left:55%;animation-delay:3.2s;}
+
+    /* LOGO mucho más grande */
+    .logo-img{
+      width:300px;
+      height:300px;
+      object-fit:cover;
+      border-radius:70%;
+      box-shadow:0 10px 30px var(--shadow);
+      border:4px solid #fff;
+      display:block;
+      margin:0 auto 20px;
+      transition: transform 0.3s ease;
+    }
+    .logo-img:hover{
+      transform:scale(1.05);
+    }
+
+    .logo{
+      position:relative;
+      z-index:1;
+      font-family:'MyteriScript', cursive;
+      font-size:64px;
+      color:var(--accent);
+      letter-spacing:1px;
+      text-shadow:
+        0 0 6px rgba(255, 215, 0, 0.5),
+        0 0 12px rgba(255, 215, 0, 0.3),
+        0 0 18px rgba(255, 215, 0, 0.2);
+    }
+
+    .sub{color:var(--muted);margin-top:6px;font-size:16px;position:relative;z-index:1;}
+
+    .promo-text{
+      margin-top:18px;
+      font-size:18px;
+      font-weight:600;
+      color:var(--accent);
+      animation:fadeSlide 8s infinite;
+    }
+    @keyframes fadeSlide{
+      0%{opacity:0;transform:translateY(10px);}
+      10%,40%{opacity:1;transform:translateY(0);}
+      60%{opacity:0;transform:translateY(-10px);}
+      100%{opacity:0;}
+    }
+
+    .cta{
+      position:relative;
+      z-index:1;
+      display:inline-block;
+      margin-top:25px;
+      padding:14px 26px;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      border:2.5px solid transparent;
+      color:white;
+      background:linear-gradient(90deg,#ff7fbd,#ff5fb0,#ff8acb);
+      box-shadow:0 10px 24px rgba(255,95,176,.25);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(255,95,176,.32)}
+
+    .pillbox{
+      display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      max-width:500px;margin:28px auto 0;position:relative;z-index:1;
+    }
+    .pill{
+      background:var(--card);
+      border:1px solid #f2e6ee;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:14px;
+      color:var(--muted);
+      box-shadow:0 6px 18px var(--shadow);
+    }
+
+    section{max-width:980px;margin:40px auto;padding:0 20px}
+    .section{
+      background:var(--card);
+      border:1px solid #f2e6ee;
+      border-radius:16px;
+      box-shadow:0 8px 30px var(--shadow);
+      padding:24px;
+    }
+
+    h2{text-align:center;color:var(--fg);margin-bottom:10px;font-size:24px}
+    .muted{text-align:center;color:var(--muted);margin-bottom:20px}
+
+    .services{
+      display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+    .card{
+      border:1px solid #f2e6ee;
+      border-radius:14px;
+      padding:16px;
+      background:linear-gradient(180deg,#fff,#fff9fc);
+      box-shadow:0 6px 18px var(--shadow);
+    }
+    .card h3{color:#574355;margin-bottom:6px}
+    .card p{color:var(--muted);font-size:14px}
+
+    .note{
+      margin-top:16px;padding:12px 14px;border-left:3px solid var(--gold);
+      background:#fffaf0;color:#6b5a2a;border-radius:10px;font-size:14px
+    }
+
+    /* =========================
+       PRESS ON (SECCIÓN NUEVA)
+    ========================== */
+    .presson-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid #f2e6ee;
+      background:linear-gradient(90deg,#fff2f8,#fff);
+      box-shadow:0 6px 18px var(--shadow);
+      color:#7b4d67;
+      font-weight:700;
+      font-size:13px;
+      white-space:nowrap;
+    }
+    .presson-sub{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:6px;
+      text-align:center;
+    }
+    .presson-ctas{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      border:2px solid transparent;
+      box-shadow:0 10px 24px rgba(255,95,176,.18);
+      transition:transform .15s ease, box-shadow .15s ease;
+      font-size:14px;
+      min-width:210px;
+      text-align:center;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(255,95,176,.24)}
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(90deg,#ff7fbd,#ff5fb0,#ff8acb);
+    }
+    .btn-ghost{
+      color:#6a2e4a;
+      background:linear-gradient(90deg,#fff,#fff7fb);
+      border-color:#f2e6ee;
+      box-shadow:0 8px 20px var(--shadow);
+    }
+
+    .steps{
+      display:grid;
+      gap:12px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      margin-top:14px;
+    }
+    .step{
+      border:1px dashed #f0d6e4;
+      border-radius:14px;
+      padding:14px;
+      background:linear-gradient(180deg,#fff,#fff9fc);
+    }
+    .step b{display:block;color:#574355;margin-bottom:4px}
+    .step span{color:var(--muted);font-size:13px}
+
+    .miniGrid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .mini{
+      border:1px solid #f2e6ee;
+      border-radius:14px;
+      padding:14px;
+      background:#fff;
+      box-shadow:0 6px 18px var(--shadow);
+    }
+    .mini .tag{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#fff2f8;
+      border:1px solid #f2e6ee;
+      color:#7b4d67;
+      font-weight:800;
+      font-size:12px;
+      margin-bottom:8px;
+    }
+    .mini h4{
+      color:#574355;
+      margin-bottom:6px;
+      font-size:15px;
+    }
+    .mini p{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:10px;
+    }
+    .mini a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      padding:10px 12px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      border:1px solid #f2e6ee;
+      background:linear-gradient(90deg,#fff,#fff7fb);
+      color:#6a2e4a;
+      box-shadow:0 8px 20px var(--shadow);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .mini a:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(255,95,176,.18)}
+    /* ========================= */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .work{
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 6px 16px var(--shadow);
+      transition:transform .25s ease, box-shadow .25s ease;
+    }
+    .work:hover{transform:scale(1.03);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+    .work img{width:100%;height:220px;object-fit:cover;display:block}
+    .work p{text-align:center;padding:8px;color:var(--fg);font-weight:600;background:#fff}
+
+    .social{text-align:center;margin-top:20px}
+    .social a{
+      display:inline-flex;align-items:center;gap:10px;
+      text-decoration:none;color:#c13584;font-weight:700;
+      padding:10px 14px;border-radius:999px;border:1px solid #f2e6ee;
+      background:#fff;box-shadow:0 6px 18px var(--shadow);
+    }
+    .social a img{width:24px;height:24px}
+
+    .wa-fab{
+      position:fixed;right:16px;bottom:16px;z-index:10;
+      width:60px;height:60px;border-radius:50%;
+      background:var(--whatsapp);display:flex;align-items:center;justify-content:center;
+      box-shadow:0 10px 24px rgba(37,211,102,.35);
+      transition:transform .15s ease;
+    }
+    .wa-fab:hover{transform:scale(1.05)}
+    .wa-fab img{width:32px;height:32px}
+
+    footer{text-align:center;color:var(--muted);padding:26px 10px 40px;font-size:14px}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="glitter">
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+      <div class="spark"></div>
+    </div>
+
+    <img class="logo-img" src="https://iili.io/Kg7MF9I.md.jpg" alt="Adda Nails logo">
+
+    <div class="logo">Adda Nails</div>
+    <p class="sub">Beauty Studio 💅✨</p>
+
+    <!-- Textos promocionales con emojis -->
+    <div class="promo-text">✨ Cuidá tus manos con estilo 💖</div>
+    <div class="promo-text" style="animation-delay:2.0s;">💅 Soft Gel, Kapping y más 💫</div>
+    <div class="promo-text" style="animation-delay:5s;">📲 Reservá tu turno hoy y brillá!🥳</div>
+
+    <a class="cta" href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quisiera%20consultar%20por%20un%20turno%20%F0%9F%92%85" target="_blank">💬 Reservá tu turno</a>
+
+    <div class="pillbox">
+      <div class="pill">🕘 09:00 a 16:00 hs</div>
+      <div class="pill">📞 11 2300-8455</div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Servicios</h2>
+    <p class="muted">Soft Gel, Semipermanente y Kapping Gel con terminaciones perfectas.</p>
+
+    <div class="services">
+      <div class="card"><h3>Soft Gel</h3><p>Extensiones livianas y resistentes para un largo impecable y natural.</p></div>
+      <div class="card"><h3>Semipermanente</h3><p>Color duradero y brillante. Ideal para mantener tus manos impecables.</p></div>
+      <div class="card"><h3>Kapping Gel</h3><p>Refuerzo para proteger y fortalecer la uña natural.</p></div>
+    </div>
+
+    <div class="note">
+      💖 Precios accesibles y atención personalizada.
+      <br><br>
+      🚗 Servicio a domicilio(costo adicional) ❤️🌟.<br>
+    </div>
+  </section>
+
+  <!-- =========================
+       PRESS ON (SECCIÓN NUEVA)
+  ========================== -->
+  <section class="section" id="presson">
+    <div class="presson-head">
+      <div style="flex:1; min-width:240px;">
+        <h2 style="margin-bottom:4px;">Press On — Listas para usar 💅✨</h2>
+        <p class="presson-sub">Podés <b>comprar tu set</b> (sin turno) o <b>sumarlo al servicio</b> como extra exclusivo.</p>
+      </div>
+      <div class="badge">⭐ EXCLUSIVO • Sets personalizados</div>
+    </div>
+
+    <div class="services" style="margin-top:14px;">
+      <div class="card">
+        <h3>Comprar Press On (sin turno)</h3>
+        <p>Elegís diseño + tamaño, y coordinamos entrega/retiro. Ideal para tener uñas perfectas cuando quieras.</p>
+        <div class="presson-ctas">
+          <a class="btn btn-primary" href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20comprar%20un%20set%20de%20PRESS%20ON%20%F0%9F%92%85%20%E2%9C%A8%20Me%20pas%C3%A1s%20dise%C3%B1os%20y%20talles%3F" target="_blank">🛍️ Comprar Press On</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sumarlas al servicio (combo)</h3>
+        <p>Si venís a tu turno, te armamos un set para que te lo lleves como extra: práctico, prolijo y súper cómodo.</p>
+        <div class="presson-ctas">
+          <a class="btn btn-ghost" href="https://wa.me/5491123008455?text=Hola%20Adda!%20Tengo%20turno%20y%20quiero%20SUMAR%20PRESS%20ON%20al%20servicio%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20cont%C3%A1s%20c%C3%B3mo%20ser%C3%ADa%3F" target="_blank">➕ Sumar a mi servicio</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><b>1) Elegís</b><span>Diseño, forma y largo (te paso opciones por WhatsApp).</span></div>
+      <div class="step"><b>2) Medimos</b><span>Te explico cómo tomarte la medida para que queden perfectas.</span></div>
+      <div class="step"><b>3) Te lo llevás</b><span>Set listo + guía de colocación para que te duren y se vean impecables.</span></div>
+    </div>
+
+    <div class="note" style="margin-top:14px;">
+      ✨ <b>Tip:</b> Los Press On son ideales para eventos, salidas o para tener un set extra listo.
+      <br>
+      📲 Consultá por <b>stock/diseños</b> y armamos el tuyo.
+    </div>
+
+    <h2 style="margin-top:18px; font-size:20px;">Destacados 💖</h2>
+    <p class="muted" style="margin-bottom:12px;">Algunos estilos que se piden un montón (se arman a pedido / según disponibilidad).</p>
+
+    <div class="miniGrid">
+      <div class="mini">
+        <div class="tag">Clean</div>
+        <h4>Nude “Milky”</h4>
+        <p>Prolijas, elegantes y combinan con todo.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20Nude%20Milky%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+
+      <div class="mini">
+        <div class="tag">Power</div>
+        <h4>Rojo intenso</h4>
+        <p>Clásico, llamativo y súper “noche”.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20Rojo%20intenso%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+
+      <div class="mini">
+        <div class="tag">Minimal</div>
+        <h4>Blanco almendra</h4>
+        <p>Minimal y premium, ideal para todo.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20Blanco%20almendra%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+
+      <div class="mini">
+        <div class="tag">Trendy</div>
+        <h4>French negra</h4>
+        <p>Fino y moderno, combina con todo.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20French%20negra%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+
+      <div class="mini">
+        <div class="tag">Baddie</div>
+        <h4>Animal print</h4>
+        <p>El detalle que levanta cualquier look.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20Animal%20print%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+
+      <div class="mini">
+        <div class="tag">Winter</div>
+        <h4>Borgoña</h4>
+        <p>Elegante y perfecto para temporada.</p>
+        <a href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quiero%20PRESS%20ON%20Borgo%C3%B1a%20%F0%9F%92%85%20%E2%9C%A8%20%C2%BFMe%20pas%C3%A1s%20talles%20y%20opciones%3F" target="_blank">Consultar este diseño</a>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= -->
+
+  <section class="section">
+    <h2>Ver trabajos</h2>
+    <p class="muted">Algunos de los diseños realizados recientemente 💅</p>
+
+    <div class="gallery">
+      <div class="work">
+        <img src="https://iili.io/KgxuOXf.md.jpg" alt="Soft Gel">
+        <p>Soft Gel</p>
+      </div>
+      <div class="work">
+        <img src="https://iili.io/Kgx1opp.md.jpg" alt="Kapping Gel">
+        <p>Kapping Gel</p>
+      </div>
+      <div class="work">
+        <img src="https://iili.io/KgxXrPI.md.jpg" alt="Semipermanente">
+        <p>Semipermanente</p>
+      </div>
+    </div>
+
+    <div class="social">
+      <a href="https://www.instagram.com/addanails__?igsh=MWNuZzdmYXo3Njd5Mw==" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        Seguime para ver todos mis trabajos 🙌🏻✨
+      </a>
+    </div>
+  </section>
+
+  <a class="wa-fab" href="https://wa.me/5491123008455?text=Hola%20Adda!%20Quisiera%20consultar%20por%20un%20turno%20%F0%9F%92%85" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <footer>
+    © <span id="year"></span> Adda Nails — Beauty Studio
+    <div style="margin-top:6px;">Diseño web https://CIBORG347.onrender.com</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
+```
